@@ -9,8 +9,11 @@ import org.springframework.data.repository.query.Param;
 import com.matmatch.assignment.entity.UserInfo;
 
 /**
- * Database Access Object for driver table.
- * <p/>
+ * 
+ * @author ekber
+ * 
+ * DAO class
+ *
  */
 public interface UserInfoRepository extends CrudRepository<UserInfo, Long>
 {

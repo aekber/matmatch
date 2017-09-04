@@ -14,8 +14,7 @@ import com.matmatch.assignment.exception.EntityNotFoundException;
 import com.matmatch.assignment.util.DataLoader;
 
 /**
- * Service to encapsulate the link between DAO and controller and to have business logic for some userInfo specific things.
- * <p/>
+ * Service class
  */
 @Service
 public class DefaultUserInfoService implements UserInfoService
@@ -32,7 +31,8 @@ public class DefaultUserInfoService implements UserInfoService
     
     @PostConstruct
     public void init()
-    {        
+    {   
+        //csv file loaded and inserted db in here
         List<UserInfo> userInfoList = dataLoader.loadObjectList(UserInfo.class, fileName);        
         userInfoRepository.save(userInfoList);
     }

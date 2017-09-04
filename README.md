@@ -16,6 +16,11 @@ The project is based on a small web service which uses the following technologie
 
 Go http://localhost:8080 address,then choose controller and endpoint.You can search user by their name and gender.Entered name is searched in first_name and last_name columns in table.
 
+Also you can query the db by this link;
+
+http://localhost:8080/v1/userinfo/search/name/search_name_here/gender/search_gender_here 
+
+
 
 ## Enter application folder
 
