@@ -49,4 +49,4 @@ $> sudo docker tag docker.io/aekbercelik/repo1:latest docker.io/aekbercelik/repo
 
 ## Docker push
 
-$> sudo mvn docker:push -Dmaven.test.skip=true
+$> sudo docker push aekbercelik/repo1
