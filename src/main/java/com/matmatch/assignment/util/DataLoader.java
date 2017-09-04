@@ -1,6 +1,6 @@
 package com.matmatch.assignment.util;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,8 +23,10 @@ public class DataLoader
         try {
             CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();
             CsvMapper mapper = new CsvMapper();
-            File file = new ClassPathResource(fileName).getFile();
-            MappingIterator<T> readValues = mapper.readerFor(type).with(bootstrapSchema).readValues(file);
+            
+            ClassPathResource classPathResource = new ClassPathResource(fileName);
+            InputStream inputStream = classPathResource.getInputStream();
+            MappingIterator<T> readValues = mapper.readerFor(type).with(bootstrapSchema).readValues(inputStream);
             return readValues.readAll();
         } catch (Exception e) {
             LOG.error("Error occurred while loading object list from file " + fileName, e);
