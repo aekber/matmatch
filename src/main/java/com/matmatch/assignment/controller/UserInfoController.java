@@ -37,7 +37,7 @@ public class UserInfoController
     @GetMapping("/search/name/{name}/gender/{gender}")
     public List<UserInfoDTO> search(@Valid @PathVariable String name, @Valid @PathVariable String gender) throws EntityNotFoundException
     {
-        return UserInfoMapper.makeDriverDTOList(userInfoService.findByNameAndGender(name, gender));
+        return UserInfoMapper.makeUserDTOList(userInfoService.findByNameAndGender(name, gender));
     }
 
 }
