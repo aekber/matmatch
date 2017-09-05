@@ -9,26 +9,26 @@ import com.matmatch.assignment.entity.UserInfo;
 
 public class UserInfoMapper
 {
-    public static UserInfo makeDriverDO(UserInfoDTO driverDTO)
+    public static UserInfo makeUserDO(UserInfoDTO userDTO)
     {
-        return new UserInfo(driverDTO.getFirstName(), driverDTO.getLastName(), driverDTO.getEmail());
+        return new UserInfo(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail());
     }
 
-    public static UserInfoDTO makeDriverDTO(UserInfo driverDO)
+    public static UserInfoDTO makeUserDTO(UserInfo userDO)
     {
         UserInfoDTO.UserInfoDTOBuilder userInfoDTOBuilder = UserInfoDTO.newBuilder()
-            .setId(driverDO.getId())
-            .setFirstName(driverDO.getFirst_name())
-            .setLastName(driverDO.getLast_name())
-        	.setEmail(driverDO.getEmail());
+            .setId(userDO.getId())
+            .setFirstName(userDO.getFirst_name())
+            .setLastName(userDO.getLast_name())
+        	.setEmail(userDO.getEmail());
 
         return userInfoDTOBuilder.createUserInfoDTO();
     }
 
-    public static List<UserInfoDTO> makeDriverDTOList(Collection<UserInfo> drivers)
+    public static List<UserInfoDTO> makeUserDTOList(Collection<UserInfo> users)
     {
-        return drivers.stream()
-                      .map(UserInfoMapper::makeDriverDTO)
+        return users.stream()
+                      .map(UserInfoMapper::makeUserDTO)
                       .collect(Collectors.toList());
     }
 }
