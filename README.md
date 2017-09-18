@@ -1,7 +1,7 @@
 
 # About
 
-Matmatch technical assignment application by Ali Ekber Celik.This application developed under Ubuntu 16.04 x64 OS with Java 8.
+Spring Boot-Docker sample application by Ali Ekber Celik.This application developed under Ubuntu 16.04 x64 OS with Java 8.
 
 The project is based on a small web service which uses the following technologies:
 
